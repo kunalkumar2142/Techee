@@ -40,3 +40,23 @@ Shopre follows a decoupled microservices architecture where each domain service 
 - **API Gateway** — Spring Cloud Gateway centralizes routing, request filtering, and acts as the single entry point for the frontend.
 - **Domain Services** — Independently deployable services for Order & Cart, Product Catalog, and User Authentication (JWT + RBAC).
 - **Orchestration** — `docker-compose.yml` spins up the full backend stack (services + database) for local development with a single command.
+
+
+ 
+## 📂 Project Structure
+ 
+```text
+/ (Root)
+├── backend/                          # Backend microservices root
+│   ├── order-and-cart-management/    # Handles orders, shopping cart, and transactions
+│   ├── product/                      # Manages product catalog and inventory
+│   ├── service-discovery/            # Eureka Service Registry for service lookup
+│   ├── shopre-api-gateway/           # Spring Cloud Gateway for centralized routing
+│   ├── user-authentication/          # JWT-based Auth and RBAC service
+│   └── docker-compose.yml            # Container orchestration for all services
+│
+└── frontend/                         # React + TypeScript frontend
+    ├── src/
+    ├── components/                   # Reusable ShadCN UI components
+    └── ...
+```
