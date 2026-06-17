@@ -5,32 +5,32 @@
 Shopre follows a decoupled microservices architecture where each domain service is independently deployable and registers itself with Eureka for discovery. All external traffic is routed through a single API Gateway, which handles centralized routing, load balancing, and request filtering.
  
 ```text
-                        ┌─────────────────────┐
+                        ┌──────────────────────┐
                         │   React + TS Client  │
                         └──────────┬───────────┘
                                    │
                                    ▼
-                        ┌─────────────────────┐
+                        ┌───────────────────────┐
                         │  Spring Cloud API     │
                         │  Gateway (Routing)    │
-                        └──────────┬───────────┘
+                        └──────────┬────────────┘
                                    │
               ┌────────────────────┼────────────────────┐
               ▼                    ▼                     ▼
-   ┌──────────────────┐ ┌──────────────────┐ ┌───────────────────────┐
+   ┌────────────────────┐ ┌───────────────────┐ ┌────────────────────────┐
    │  User Auth Service │ │ Product Service   │ │ Order & Cart Service   │
-   │   (JWT + RBAC)      │ │ (Catalog)          │ │ (Orders, Cart, Txns)    │
+   │   (JWT + RBAC)     │ │ (Catalog)         │ │ (Orders, Cart, Txns)   │
    └──────────┬─────────┘ └──────────┬────────┘ └───────────┬────────────┘
-              │                       │                       │
-              └───────────────┬───────┴───────────────────────┘
+              │                      │                      │
+              └───────────────┬──────┴──────────────────────┘
                                ▼
-                    ┌────────────────────────┐
-                    │  Eureka Service Registry │
-                    └────────────────────────┘
+                    ┌─────────────────────────┐
+                    │ Eureka Service Registry │
+                    └─────────────────────────┘
                                │
                                ▼
                     ┌────────────────────────┐
-                    │     PostgreSQL DB(s)     │
+                    │     PostgreSQL DB(s)   │
                     └────────────────────────┘
 ```
  
