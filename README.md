@@ -60,3 +60,16 @@ Shopre follows a decoupled microservices architecture where each domain service 
     ├── components/                   # Reusable ShadCN UI components
     └── ...
 ```
+
+
+
+### 🙋 About Me
+ 
+I'm a full stack developer who enjoys building scalable, well-structured systems end to end — from RESTful APIs and microservices on the backend to responsive, component-driven UIs on the frontend. Most of my backend work centers around Java and the Spring ecosystem, paired with React on the frontend, and I have a growing interest in distributed systems and cloud-native design.
+ 
+---
+ 
+### 🚀 Projects
+ 
+- **[doMess](https://github.com/kunalkumar2142/doMess)** — Real-time messaging app built with Spring Boot & WebSocket.
+- **[Shopre](https://github.com/kunalkumar2142/Shopre)** — Microservices e-commerce platform with Spring Cloud, Docker & JWT auth.
